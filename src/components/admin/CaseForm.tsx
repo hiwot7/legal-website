@@ -105,13 +105,13 @@ export default function CaseForm({
         <input type="date" value={values.ketero} onChange={(e) => set("ketero", e.target.value)} style={inputStyle} />
       </label>
 
-      {error && <p style={{ fontSize: 13, color: "#7a0f14" }}>{error}</p>}
+      {error && <p style={{ fontSize: 13, color: "#480823" }}>{error}</p>}
 
       <div style={{ display: "flex", gap: 12 }}>
         <button
           type="submit"
           disabled={saving}
-          style={{ padding: "11px 18px", background: "#7a0f14", color: "#fff", border: "none", borderRadius: 2, fontWeight: 600, fontSize: 14, cursor: "pointer" }}
+          style={{ padding: "11px 18px", background: "#480823", color: "#fff", border: "none", borderRadius: 2, fontWeight: 600, fontSize: 14, cursor: "pointer" }}
         >
           {saving ? "Saving…" : mode === "create" ? "Create Case" : "Save Changes"}
         </button>

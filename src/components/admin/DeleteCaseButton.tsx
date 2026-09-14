@@ -19,7 +19,7 @@ export default function DeleteCaseButton({ id }: { id: string }) {
     <button
       onClick={handleDelete}
       disabled={busy}
-      style={{ fontSize: 12.5, fontWeight: 600, color: "#7a0f14", background: "none", border: "none", cursor: "pointer", padding: 0 }}
+      style={{ fontSize: 12.5, fontWeight: 600, color: "#480823", background: "none", border: "none", cursor: "pointer", padding: 0 }}
     >
       Delete
     </button>

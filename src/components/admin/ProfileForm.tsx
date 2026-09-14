@@ -66,7 +66,7 @@ export default function ProfileForm({ existing }: { existing: Existing }) {
             <span style={{ fontSize: 12, color: "#8a93a3" }}>No photo</span>
           )}
         </div>
-        <label style={{ fontSize: 13, fontWeight: 600, color: "#7a0f14", cursor: "pointer" }}>
+        <label style={{ fontSize: 13, fontWeight: 600, color: "#480823", cursor: "pointer" }}>
           {preview ? "Change photo" : "Upload photo"}
           <input type="file" accept="image/*" onChange={(e) => handleFile(e.target.files?.[0] || null)} style={{ display: "none" }} />
         </label>
@@ -94,13 +94,13 @@ export default function ProfileForm({ existing }: { existing: Existing }) {
         Show on public site
       </label>
 
-      {status === "error" && <p style={{ fontSize: 13, color: "#7a0f14" }}>{error}</p>}
+      {status === "error" && <p style={{ fontSize: 13, color: "#480823" }}>{error}</p>}
       {status === "saved" && <p style={{ fontSize: 13, color: "#166a3f" }}>Saved.</p>}
 
       <button
         type="submit"
         disabled={status === "saving"}
-        style={{ alignSelf: "flex-start", padding: "11px 18px", background: "#7a0f14", color: "#fff", border: "none", borderRadius: 2, fontWeight: 600, fontSize: 14, cursor: "pointer" }}
+        style={{ alignSelf: "flex-start", padding: "11px 18px", background: "#480823", color: "#fff", border: "none", borderRadius: 2, fontWeight: 600, fontSize: 14, cursor: "pointer" }}
       >
         {status === "saving" ? "Saving…" : "Save Profile"}
       </button>

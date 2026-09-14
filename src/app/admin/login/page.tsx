@@ -80,7 +80,7 @@ export default function AdminLoginPage() {
           />
         </label>
 
-        {error && <p style={{ fontSize: 13, color: "#7a0f14" }}>{error}</p>}
+        {error && <p style={{ fontSize: 13, color: "#480823" }}>{error}</p>}
 
         <button
           type="submit"
@@ -88,7 +88,7 @@ export default function AdminLoginPage() {
           style={{
             marginTop: 8,
             padding: "12px 16px",
-            background: "#7a0f14",
+            background: "#480823",
             color: "#fff",
             border: "none",
             borderRadius: 2,

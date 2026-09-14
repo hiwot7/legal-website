@@ -53,7 +53,7 @@ export default function UserRow({
             fontWeight: 700,
             textTransform: "uppercase",
             letterSpacing: ".04em",
-            color: role === "SUPERADMIN" ? "#7a0f14" : "#5b6472",
+            color: role === "SUPERADMIN" ? "#480823" : "#5b6472",
           }}
         >
           {role}
@@ -73,7 +73,7 @@ export default function UserRow({
             <button
               onClick={remove}
               disabled={busy}
-              style={{ fontSize: 12.5, fontWeight: 600, color: "#7a0f14", background: "none", border: "none", cursor: "pointer" }}
+              style={{ fontSize: 12.5, fontWeight: 600, color: "#480823", background: "none", border: "none", cursor: "pointer" }}
             >
               Remove
             </button>

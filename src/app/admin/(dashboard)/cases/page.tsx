@@ -11,7 +11,7 @@ export default async function CasesPage() {
         <h1 style={{ fontSize: 22, fontWeight: 700, color: "#0f172a" }}>Cases</h1>
         <Link
           href="/admin/cases/new"
-          style={{ fontSize: 13.5, fontWeight: 600, background: "#7a0f14", color: "#fff", padding: "9px 16px", borderRadius: 2, textDecoration: "none" }}
+          style={{ fontSize: 13.5, fontWeight: 600, background: "#480823", color: "#fff", padding: "9px 16px", borderRadius: 2, textDecoration: "none" }}
         >
           + New Case
         </Link>
@@ -34,7 +34,7 @@ export default async function CasesPage() {
             <tbody>
               {cases.map((c) => (
                 <tr key={c.id} style={{ borderTop: "1px solid #e2e6ea" }}>
-                  <td style={{ padding: "10px 14px", fontWeight: 700, color: "#7a0f14", fontFamily: "monospace" }}>{c.caseId}</td>
+                  <td style={{ padding: "10px 14px", fontWeight: 700, color: "#480823", fontFamily: "monospace" }}>{c.caseId}</td>
                   <td style={{ padding: "10px 14px" }}>{c.client}</td>
                   <td style={{ padding: "10px 14px" }}>{c.phone || "—"}</td>
                   <td style={{ padding: "10px 14px" }}>{c.attorney}</td>

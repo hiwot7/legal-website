@@ -14,7 +14,7 @@ export default function AdminNav({ name, role }: { name: string; role: string })
   const pathname = usePathname();
 
   return (
-    <header style={{ borderBottom: "1px solid #7d0f15", background: "#7a0f14" }}>
+    <header style={{ borderBottom: "1px solid #380619", background: "#480823" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "16px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
           <span

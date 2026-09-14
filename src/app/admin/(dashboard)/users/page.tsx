@@ -18,7 +18,7 @@ export default async function UsersPage() {
         <h1 style={{ fontSize: 22, fontWeight: 700, color: "#0f172a" }}>Admin Users</h1>
         <Link
           href="/admin/users/new"
-          style={{ fontSize: 13.5, fontWeight: 600, background: "#7a0f14", color: "#fff", padding: "9px 16px", borderRadius: 2, textDecoration: "none" }}
+          style={{ fontSize: 13.5, fontWeight: 600, background: "#480823", color: "#fff", padding: "9px 16px", borderRadius: 2, textDecoration: "none" }}
         >
           + New Admin
         </Link>

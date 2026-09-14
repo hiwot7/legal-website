@@ -61,13 +61,13 @@ export default function NewUserPage() {
           </select>
         </label>
 
-        {error && <p style={{ fontSize: 13, color: "#7a0f14" }}>{error}</p>}
+        {error && <p style={{ fontSize: 13, color: "#480823" }}>{error}</p>}
 
         <div style={{ display: "flex", gap: 12 }}>
           <button
             type="submit"
             disabled={saving}
-            style={{ padding: "11px 18px", background: "#7a0f14", color: "#fff", border: "none", borderRadius: 2, fontWeight: 600, fontSize: 14, cursor: "pointer" }}
+            style={{ padding: "11px 18px", background: "#480823", color: "#fff", border: "none", borderRadius: 2, fontWeight: 600, fontSize: 14, cursor: "pointer" }}
           >
             {saving ? "Creating…" : "Create User"}
           </button>
