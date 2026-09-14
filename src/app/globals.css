@@ -421,6 +421,17 @@ button {
   }
 }
 
+@media (min-width: 720px) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (min-width: 1000px) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+
 @media (min-width: 640px) {
   .contact-grid {
     grid-template-columns: 1fr 1fr !important;

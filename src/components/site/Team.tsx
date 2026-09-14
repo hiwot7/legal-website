@@ -18,6 +18,8 @@ export default function Team({ t }: { t: Translation }) {
 
   if (members !== null && members.length === 0) return null;
 
+  const shown = (members ?? []).slice(0, 3);
+
   return (
     <section id="team" style={{ borderBottom: "1px solid var(--border)" }}>
       <div className="container" style={{ padding: "72px 24px" }}>
@@ -28,10 +30,10 @@ export default function Team({ t }: { t: Translation }) {
 
         <div
           style={{ display: "grid", gridTemplateColumns: "1fr", gap: 24 }}
-          className="insights-grid"
+          className="team-grid"
         >
-          {(members ?? []).map((m, i) => (
-            <Reveal key={m.id} delay={i * 90}>
+          {shown.map((m, i) => (
+            <Reveal key={m.id} delay={i * 120} from={i % 2 === 0 ? "left" : "right"}>
               <div className="card" style={{ padding: 26, display: "flex", flexDirection: "column", gap: 14, height: "100%" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
                   <div
