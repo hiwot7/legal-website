@@ -1,4 +1,4 @@
-# Sterling & Cole Law Group — Website
+# Beka law firm— Website
 
 A Next.js (App Router) marketing site for a law firm, with a Gemini-powered AI support
 chat widget.
