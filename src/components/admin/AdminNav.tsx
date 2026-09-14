@@ -8,6 +8,7 @@ const LINKS = [
   { href: "/admin/leads", label: "Leads" },
   { href: "/admin/cases", label: "Cases" },
   { href: "/admin/profile", label: "My Profile" },
+  { href: "/admin/change-password", label: "Change Password" },
 ];
 
 export default function AdminNav({ name, role }: { name: string; role: string }) {
