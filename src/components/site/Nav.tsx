@@ -6,6 +6,7 @@ import { IconMenu, IconX, IconBot, IconMapPin } from "./Icons";
 import Pill from "./Pill";
 import LangToggle from "./LangToggle";
 import BekaLogo from "./BekaLogo";
+import ThemeToggle from "./ThemeToggle";
 
 const SECTION_IDS = ["work", "team", "lookup", "insights", "contact"];
 
@@ -70,6 +71,7 @@ export default function Nav({
             <IconMapPin size={13} /> {t.cities}
           </Pill>
           <LangToggle lang={lang} setLang={setLang} />
+          <ThemeToggle dark />
           <button
             onClick={onTrack}
             style={{
@@ -92,6 +94,7 @@ export default function Nav({
 
         <div style={{ display: "flex", alignItems: "center", gap: 10 }} className="nav-mobile-right">
           <LangToggle lang={lang} setLang={setLang} />
+          <ThemeToggle dark />
           <button
             aria-label="Open menu"
             onClick={() => setDrawerOpen(true)}
@@ -162,6 +165,7 @@ export default function Nav({
             <Pill>
               <IconMapPin size={13} /> {t.cities}
             </Pill>
+            <ThemeToggle />
             <button
               className="btn btn-primary"
               onClick={() => {
