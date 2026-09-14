@@ -1,8 +1,8 @@
 import type { Translation } from "@/lib/i18n";
-import { IconScale, IconBriefcase, IconHeart, IconUsers, IconArrowRight } from "./Icons";
+import { IconScale, IconBriefcase, IconHeart, IconUsers, IconCheck, IconClock, IconArrowRight } from "./Icons";
 import Reveal from "./Reveal";
 
-const ICONS = [IconScale, IconBriefcase, IconHeart, IconUsers];
+const ICONS = [IconBriefcase, IconScale, IconUsers, IconCheck, IconClock, IconHeart];
 
 export default function PracticeAreas({ t }: { t: Translation }) {
   return (
@@ -17,7 +17,7 @@ export default function PracticeAreas({ t }: { t: Translation }) {
           style={{ display: "grid", gridTemplateColumns: "1fr", gap: 1, background: "var(--border)", border: "1px solid var(--border)" }}
         >
           {t.areas.map((a, i) => {
-            const Ic = ICONS[i];
+            const Ic = ICONS[i % ICONS.length];
             return (
               <Reveal key={i} delay={i * 90}>
                 <div

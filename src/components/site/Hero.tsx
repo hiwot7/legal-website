@@ -146,7 +146,7 @@ export default function Hero({ t, onOpenAI, onTrack }: { t: Translation; onOpenA
               {[
                 [t.statCases, firm.stats.cases],
                 [t.statYears, firm.stats.years],
-                [t.statCourts, firm.stats.courts],
+                [t.statPartners, firm.stats.partners],
               ].map(([label, val], i) => (
                 <div
                   key={i}
