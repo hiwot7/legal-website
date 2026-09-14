@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import type { Lang, Translation } from "@/lib/i18n";
-import { IconMenu, IconX, IconBot, IconMapPin } from "./Icons";
-import Pill from "./Pill";
+import { IconMenu, IconX, IconBot } from "./Icons";
 import LangToggle from "./LangToggle";
 import BekaLogo from "./BekaLogo";
 import ThemeToggle from "./ThemeToggle";
@@ -67,9 +66,6 @@ export default function Nav({
         </nav>
 
         <div style={{ display: "none", alignItems: "center", gap: 14 }} className="nav-desktop-right">
-          <Pill>
-            <IconMapPin size={13} /> {t.cities}
-          </Pill>
           <LangToggle lang={lang} setLang={setLang} />
           <ThemeToggle dark />
           <button
@@ -162,9 +158,6 @@ export default function Nav({
             ))}
           </nav>
           <div style={{ borderTop: "1px solid var(--border)", paddingTop: 18, display: "flex", flexDirection: "column", gap: 10 }}>
-            <Pill>
-              <IconMapPin size={13} /> {t.cities}
-            </Pill>
             <ThemeToggle />
             <button
               className="btn btn-primary"
