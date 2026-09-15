@@ -61,6 +61,14 @@ export type Translation = {
   formDisclaimer: string;
   footerRights: string;
   footerNote: string;
+  popupHeadline: string;
+  popupBody: string;
+  popupNamePlaceholder: string;
+  popupEmailPlaceholder: string;
+  popupSubmit: string;
+  popupSubmitting: string;
+  popupSuccess: string;
+  popupDismiss: string;
 };
 
 export const T: Record<Lang, Translation> = {
@@ -135,6 +143,14 @@ export const T: Record<Lang, Translation> = {
     formDisclaimer: "Submitting this form does not create an attorney-client relationship.",
     footerRights: "All rights reserved.",
     footerNote: "Advocates admitted to practice before the Federal Courts of Ethiopia.",
+    popupHeadline: "Stay Ahead of Legal Changes",
+    popupBody: "Join our list for timely legal updates and insights from our attorneys. No spam — unsubscribe anytime.",
+    popupNamePlaceholder: "Your name",
+    popupEmailPlaceholder: "Your email",
+    popupSubmit: "Keep Me Informed",
+    popupSubmitting: "Joining…",
+    popupSuccess: "You're on the list. Thank you!",
+    popupDismiss: "No thanks",
   },
   am: {
     nav: ["የምናከናውነው", "ቡድናችን", "የክስ ማጣራት", "ጠቃሚ መረጃዎች", "አግኙን"],
@@ -206,6 +222,14 @@ export const T: Record<Lang, Translation> = {
     formDisclaimer: "ይህን ቅጽ መላክ የጠበቃ-ደንበኛ ግንኙነት አይፈጥርም።",
     footerRights: "ሁሉም መብቶች የተጠበቁ ናቸው።",
     footerNote: "በኢትዮጵያ ፌደራል ፍርድ ቤቶች ፊት ለመቆም የተፈቀደላቸው ጠበቆች።",
+    popupHeadline: "ከህግ ለውጦች ጋር ወቅታዊ ይሁኑ",
+    popupBody: "ከጠበቆቻችን ወቅታዊ የህግ ዜናዎችን እና ግንዛቤዎችን ለማግኘት ይመዝገቡ። ምንም አይነት አላስፈላጊ መልእክት የለም — በማንኛውም ጊዜ መውጣት ይችላሉ።",
+    popupNamePlaceholder: "ሙሉ ስምዎ",
+    popupEmailPlaceholder: "ኢሜይልዎ",
+    popupSubmit: "አሳውቁኝ",
+    popupSubmitting: "እየተመዘገበ ነው…",
+    popupSuccess: "ተመዝግበዋል። እናመሰግናለን!",
+    popupDismiss: "አይ አመሰግናለሁ",
   },
   om: {
     nav: ["Waan Hojjennu", "Garee Keenya", "Sakatta'a Dhimmaa", "Odeeffannoo", "Nu Qunnamaa"],
@@ -279,5 +303,13 @@ export const T: Record<Lang, Translation> = {
     formDisclaimer: "Foormii kana erguun walitti dhufeenya abukaatoo-maamilaa hin uumu.",
     footerRights: "Mirgi hundi seeraan eegamaadha.",
     footerNote: "Abukaatoo Mana Murtii Federaalaa Itoophiyaa duratti dhaabbachuuf hayyamamaniidha.",
+    popupHeadline: "Jijjiirama Seeraa Waliin Deemi",
+    popupBody: "Odeeffannoo fi hubannoo seeraa yeroo isaatti abukaatoota keenya irraa argachuuf galmaa'aa. Ergaa faayidaa hin qabne hin jiru — yeroo barbaaddan bahuu dandeessu.",
+    popupNamePlaceholder: "Maqaa keessan",
+    popupEmailPlaceholder: "Imeelii keessan",
+    popupSubmit: "Na Beeksisaa",
+    popupSubmitting: "Galmaa'aa jira…",
+    popupSuccess: "Galmooftaniirtu. Galatoomaa!",
+    popupDismiss: "Lakki, Galatoomaa",
   },
 };

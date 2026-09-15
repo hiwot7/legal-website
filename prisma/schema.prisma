@@ -53,6 +53,13 @@ model Lead {
   updatedAt    DateTime   @updatedAt
 }
 
+model Subscriber {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
+
 model CaseRecord {
   id        String   @id @default(cuid())
   caseId    String   @unique

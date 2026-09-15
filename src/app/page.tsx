@@ -11,6 +11,7 @@ import Insights from "@/components/site/Insights";
 import Contact from "@/components/site/Contact";
 import SiteFooter from "@/components/site/SiteFooter";
 import AIDrawer from "@/components/site/AIDrawer";
+import SubscribePopup from "@/components/site/SubscribePopup";
 import LadyJustice from "@/components/site/LadyJustice";
 import { IconBot } from "@/components/site/Icons";
 
@@ -66,6 +67,7 @@ export default function Home() {
         </button>
 
         <AIDrawer open={aiOpen} onClose={() => setAiOpen(false)} t={t} lang={lang} />
+        <SubscribePopup t={t} />
       </div>
     </div>
   );
