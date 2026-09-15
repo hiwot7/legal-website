@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { T, type Lang } from "@/lib/i18n";
 import Nav from "@/components/site/Nav";
 import Hero from "@/components/site/Hero";
@@ -8,6 +8,7 @@ import PracticeAreas from "@/components/site/PracticeAreas";
 import Team from "@/components/site/Team";
 import CaseLookup from "@/components/site/CaseLookup";
 import Insights from "@/components/site/Insights";
+import Testimonials from "@/components/site/Testimonials";
 import Contact from "@/components/site/Contact";
 import SiteFooter from "@/components/site/SiteFooter";
 import AIDrawer from "@/components/site/AIDrawer";
@@ -15,10 +16,28 @@ import SubscribePopup from "@/components/site/SubscribePopup";
 import LadyJustice from "@/components/site/LadyJustice";
 import { IconBot } from "@/components/site/Icons";
 
+type ContentOverrides = Record<string, { en: string; am: string; om: string }>;
+
 export default function Home() {
   const [lang, setLang] = useState<Lang>("en");
   const [aiOpen, setAiOpen] = useState(false);
-  const t = T[lang];
+  const [overrides, setOverrides] = useState<ContentOverrides>({});
+
+  useEffect(() => {
+    fetch("/api/content")
+      .then((r) => r.json())
+      .then(setOverrides)
+      .catch(() => {});
+  }, []);
+
+  const t = useMemo(() => {
+    const base = T[lang];
+    const merged = { ...base };
+    for (const [key, val] of Object.entries(overrides)) {
+      (merged as unknown as Record<string, string>)[key] = val[lang];
+    }
+    return merged;
+  }, [lang, overrides]);
 
   const scrollToLookup = () => {
     document.getElementById("lookup")?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -40,6 +59,7 @@ export default function Home() {
         <Team t={t} />
         <CaseLookup t={t} />
         <Insights t={t} />
+        <Testimonials t={t} />
         <Contact t={t} />
         <SiteFooter t={t} />
 

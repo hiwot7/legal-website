@@ -42,6 +42,8 @@ export type Translation = {
   aiUnavailable: string;
   insightsEyebrow: string;
   insightsTitle: string;
+  testimonialsEyebrow: string;
+  testimonialsTitle: string;
   readMore: string;
   share: string;
   copied: string;
@@ -124,6 +126,8 @@ export const T: Record<Lang, Translation> = {
     aiUnavailable: "The AI assistant isn't configured yet. Please contact the firm directly.",
     insightsEyebrow: "Legal Insights",
     insightsTitle: "Analysis & Commentary",
+    testimonialsEyebrow: "Client Voices",
+    testimonialsTitle: "What Our Clients Say",
     readMore: "Read the brief",
     share: "Share",
     copied: "Link Copied!",
@@ -203,6 +207,8 @@ export const T: Record<Lang, Translation> = {
     aiUnavailable: "AI አማካሪው እስካሁን አልተዋቀረም። እባክዎ በቀጥታ ድርጅቱን ያግኙ።",
     insightsEyebrow: "የህግ ግንዛቤዎች",
     insightsTitle: "ትንታኔ እና አስተያየት",
+    testimonialsEyebrow: "የደንበኞቻችን ድምጽ",
+    testimonialsTitle: "ደንበኞቻችን ምን ይላሉ",
     readMore: "ሙሉውን ያንብቡ",
     share: "አጋራ",
     copied: "ሊንክ ተቀድቷል!",
@@ -284,6 +290,8 @@ export const T: Record<Lang, Translation> = {
     aiUnavailable: "Gorsaan AI amma hin qindaa'ne. Maaloo dhaabbata kallattiin qunnamaa.",
     insightsEyebrow: "Hubannaa Seeraa",
     insightsTitle: "Xiinxala fi Yaada",
+    testimonialsEyebrow: "Sagalee Maamiltootaa",
+    testimonialsTitle: "Maamiltoonni Keenya Maal Jedhu",
     readMore: "Guutuu dubbisi",
     share: "Qooddu",
     copied: "Liinkiin Garagalfame!",

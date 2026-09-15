@@ -20,6 +20,7 @@ model User {
   createdAt    DateTime    @default(now())
   updatedAt    DateTime    @updatedAt
   teamProfile  TeamMember?
+  posts        Post[]
 }
 
 model TeamMember {
@@ -58,6 +59,61 @@ model Subscriber {
   name      String
   email     String   @unique
   createdAt DateTime @default(now())
+}
+
+enum ContentStatus {
+  DRAFT
+  IN_REVIEW
+  PUBLISHED
+}
+
+enum PostType {
+  ARTICLE
+  CASE_STUDY
+}
+
+model Post {
+  id              String        @id @default(cuid())
+  type            PostType      @default(ARTICLE)
+  slug            String        @unique
+  title           String
+  excerpt         String
+  body            String
+  coverImage      Bytes?
+  coverImageType  String?
+  metaTitle       String?
+  metaDescription String?
+  status          ContentStatus @default(DRAFT)
+  authorId        String?
+  author          User?         @relation(fields: [authorId], references: [id], onDelete: SetNull)
+  publishedAt     DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+}
+
+model Testimonial {
+  id         String        @id @default(cuid())
+  clientName String
+  clientRole String?
+  quote      String
+  status     ContentStatus @default(DRAFT)
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+}
+
+model SiteImage {
+  key       String   @id
+  data      Bytes
+  mimeType  String
+  updatedAt DateTime @updatedAt
+}
+
+model SiteContent {
+  key       String   @id
+  valueEn   String
+  valueAm   String
+  valueOm   String
+  updatedAt DateTime @updatedAt
 }
 
 model CaseRecord {

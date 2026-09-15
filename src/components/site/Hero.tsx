@@ -7,9 +7,9 @@ import { IconArrowRight, IconBot, IconClock } from "./Icons";
 import { PhotoScene } from "./HeroScenes";
 
 const SLIDES = [
-  { src: "/hero/justice-statue.jpg", position: "center 30%" },
-  { src: "/hero/library.jpg", position: "center" },
-  { src: "/hero/justice-full.jpg", position: "center 20%" },
+  { src: "/api/site-images/hero-1", position: "center 30%" },
+  { src: "/api/site-images/hero-2", position: "center" },
+  { src: "/api/site-images/hero-3", position: "center 20%" },
 ];
 const SLIDE_DURATION = 7000;
 
