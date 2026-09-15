@@ -14,7 +14,9 @@ export async function GET(req: Request, { params }: { params: Promise<{ key: str
   if (!image) {
     const fallback = FALLBACKS[key];
     if (fallback) {
-      return NextResponse.redirect(new URL(fallback, req.url));
+      const proto = req.headers.get("x-forwarded-proto") || "https";
+      const host = req.headers.get("x-forwarded-host") || req.headers.get("host");
+      return NextResponse.redirect(`${proto}://${host}${fallback}`);
     }
     return NextResponse.json({ error: "Not found." }, { status: 404 });
   }
