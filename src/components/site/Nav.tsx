@@ -58,7 +58,8 @@ export default function Nav({
             <button
               key={i}
               onClick={() => scrollTo(SECTION_IDS[i])}
-              style={{ background: "none", border: "none", textDecoration: "none", color: "#ffffff", padding: 0 }}
+              className="nav-link"
+              style={{ background: "none", border: "none", textDecoration: "none", color: "#ffffff", padding: "4px 0", position: "relative" }}
             >
               {label}
             </button>

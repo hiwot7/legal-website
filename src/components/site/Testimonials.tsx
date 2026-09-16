@@ -30,7 +30,7 @@ export default function Testimonials({ t }: { t: Translation }) {
         <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 24 }} className="insights-grid">
           {shown.map((it, i) => (
             <Reveal key={it.id} delay={i * 100}>
-              <div className="card" style={{ padding: 28, height: "100%", display: "flex", flexDirection: "column", gap: 16 }}>
+              <div className="card card-hoverable" style={{ padding: 28, height: "100%", display: "flex", flexDirection: "column", gap: 16 }}>
                 <div className="serif" style={{ fontSize: 40, lineHeight: 1, color: "var(--gold)" }}>
                   &ldquo;
                 </div>

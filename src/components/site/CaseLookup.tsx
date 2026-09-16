@@ -99,13 +99,16 @@ export default function CaseLookup({ t }: { t: Translation }) {
           {error && <p style={{ fontSize: 13, color: "var(--accent)", marginTop: 14 }}>{error}</p>}
 
           {result && (
-            <div style={{ marginTop: 22, borderTop: "1px solid var(--border)", paddingTop: 20 }}>
+            <div style={{ marginTop: 22, borderTop: "1px solid var(--border)", paddingTop: 20, animation: "resultIn .4s ease" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 16, flexWrap: "wrap", gap: 8 }}>
                 <span className="mono" style={{ fontSize: 13, fontWeight: 700, color: "var(--accent)" }}>
                   {result.id}
                 </span>
                 <Pill>
-                  <IconCheck size={13} /> On File
+                  <span style={{ display: "inline-flex", animation: "checkPop .4s ease .15s both" }}>
+                    <IconCheck size={13} />
+                  </span>{" "}
+                  On File
                 </Pill>
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }} className="result-grid">

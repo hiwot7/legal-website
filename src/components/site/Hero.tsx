@@ -5,6 +5,7 @@ import type { Translation } from "@/lib/i18n";
 import { firm } from "@/lib/firm";
 import { IconArrowRight, IconBot, IconClock } from "./Icons";
 import { PhotoScene } from "./HeroScenes";
+import CountUp from "./CountUp";
 
 const SLIDES = [
   { src: "/api/site-images/hero-1", position: "center 30%" },
@@ -157,7 +158,7 @@ export default function Hero({ t, onOpenAI, onTrack }: { t: Translation; onOpenA
                   }}
                 >
                   <div className="mono serif" style={{ fontSize: 30, fontWeight: 700, color: "var(--gold)" }}>
-                    {val}
+                    <CountUp value={val} delay={i * 150} />
                   </div>
                   <div style={{ fontSize: 11.5, color: "rgba(255,255,255,.65)", marginTop: 6, lineHeight: 1.35 }}>{label}</div>
                 </div>
