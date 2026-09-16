@@ -38,6 +38,7 @@ export type Translation = {
   aiDisclaimer: string;
   aiPlaceholder: string;
   aiOpenLabel: string;
+  aiTeaser: string;
   aiGreeting: string;
   aiUnavailable: string;
   insightsEyebrow: string;
@@ -121,6 +122,7 @@ export const T: Record<Lang, Translation> = {
     aiDisclaimer: "For informational purposes only. Consult a licensed attorney for formal legal advice.",
     aiPlaceholder: "Ask about contracts, disputes, timelines…",
     aiOpenLabel: "Consult AI Assistant",
+    aiTeaser: "👋 Have a legal question? Ask me anything.",
     aiGreeting:
       "Hello — I'm the virtual assistant for Beka Law Firm. I can answer general questions about our practice areas or help you describe your legal matter. How can I help today?",
     aiUnavailable: "The AI assistant isn't configured yet. Please contact the firm directly.",
@@ -203,6 +205,7 @@ export const T: Record<Lang, Translation> = {
     aiDisclaimer: "ለመረጃ አገልግሎት ብቻ የቀረበ ነው። መደበኛ የህግ ምክር ለማግኘት ፈቃድ ያለው ጠበቃ ያማክሩ።",
     aiPlaceholder: "ስለ ውሎች፣ ክርክሮች፣ የጊዜ ሰሌዳዎች ይጠይቁ…",
     aiOpenLabel: "ከ AI አማካሪ ጠይቅ",
+    aiTeaser: "👋 የህግ ጥያቄ አለዎት? ማንኛውንም ነገር ይጠይቁኝ።",
     aiGreeting: "ሰላም — እኔ የቤካ ሎው ፈርም ምናባዊ አማካሪ ነኝ። ስለ አገልግሎቶቻችን ጠይቁኝ ወይም ጉዳይዎን ይግለጹልኝ።",
     aiUnavailable: "AI አማካሪው እስካሁን አልተዋቀረም። እባክዎ በቀጥታ ድርጅቱን ያግኙ።",
     insightsEyebrow: "የህግ ግንዛቤዎች",
@@ -285,6 +288,7 @@ export const T: Record<Lang, Translation> = {
     aiDisclaimer: "Kun qofa odeeffannoodhaaf. Gorsa seeraa dhugaa argachuuf abukaatoo hayyama qabu gaafadhaa.",
     aiPlaceholder: "Waa'ee waliigaltee, falmii, yeroo gaafadhu…",
     aiOpenLabel: "Gorsaa AI Gaafadhu",
+    aiTeaser: "👋 Gaaffii seeraa qabdaa? Waan barbaaddu na gaafadhu.",
     aiGreeting:
       "Akkam — ani gorsaa virtual Beka Law Firm ti. Waa'ee tajaajila keenyaa na gaafadhaa ykn dhimma kee naa ibsi.",
     aiUnavailable: "Gorsaan AI amma hin qindaa'ne. Maaloo dhaabbata kallattiin qunnamaa.",

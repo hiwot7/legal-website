@@ -12,9 +12,9 @@ import Testimonials from "@/components/site/Testimonials";
 import Contact from "@/components/site/Contact";
 import SiteFooter from "@/components/site/SiteFooter";
 import AIDrawer from "@/components/site/AIDrawer";
+import AIChatLauncher from "@/components/site/AIChatLauncher";
 import SubscribePopup from "@/components/site/SubscribePopup";
 import LadyJustice from "@/components/site/LadyJustice";
-import { IconBot } from "@/components/site/Icons";
 
 type ContentOverrides = Record<string, { en: string; am: string; om: string }>;
 
@@ -63,28 +63,7 @@ export default function Home() {
         <Contact t={t} />
         <SiteFooter t={t} />
 
-        <button
-          onClick={() => setAiOpen(true)}
-          aria-label={t.aiOpenLabel}
-          style={{
-            position: "fixed",
-            bottom: 24,
-            right: 24,
-            zIndex: 50,
-            width: 58,
-            height: 58,
-            borderRadius: "50%",
-            background: "var(--accent)",
-            color: "var(--accent-ink)",
-            border: "none",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            boxShadow: "0 8px 24px rgba(150,19,26,.35)",
-          }}
-        >
-          <IconBot size={26} />
-        </button>
+        <AIChatLauncher t={t} onOpen={() => setAiOpen(true)} />
 
         <AIDrawer open={aiOpen} onClose={() => setAiOpen(false)} t={t} lang={lang} />
         <SubscribePopup t={t} />
