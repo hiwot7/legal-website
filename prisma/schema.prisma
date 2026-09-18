@@ -50,6 +50,8 @@ model Lead {
   practiceArea String?
   message      String
   status       LeadStatus @default(NEW)
+  response     String?
+  respondedAt  DateTime?
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
 }

@@ -10,6 +10,7 @@ import CaseLookup from "@/components/site/CaseLookup";
 import Insights from "@/components/site/Insights";
 import Testimonials from "@/components/site/Testimonials";
 import Contact from "@/components/site/Contact";
+import MessageStatus from "@/components/site/MessageStatus";
 import SiteFooter from "@/components/site/SiteFooter";
 import AIDrawer from "@/components/site/AIDrawer";
 import AIChatLauncher from "@/components/site/AIChatLauncher";
@@ -61,6 +62,7 @@ export default function Home() {
         <Insights t={t} />
         <Testimonials t={t} />
         <Contact t={t} />
+        <MessageStatus t={t} />
         <SiteFooter t={t} />
 
         <AIChatLauncher t={t} onOpen={() => setAiOpen(true)} />

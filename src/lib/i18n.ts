@@ -34,6 +34,16 @@ export type Translation = {
   resultCourt: string;
   noResultHint: string;
   lookupNotFound: string;
+  msgEyebrow: string;
+  msgTitle: string;
+  msgSub: string;
+  msgPlaceholder: string;
+  msgSearch: string;
+  msgSearching: string;
+  msgNotFound: string;
+  msgNoResponseYet: string;
+  msgRespondedOn: string;
+  msgYourMessage: string;
   aiTitle: string;
   aiDisclaimer: string;
   aiPlaceholder: string;
@@ -124,6 +134,16 @@ export const T: Record<Lang, Translation> = {
     resultCourt: "Court",
     noResultHint: "Enter the Case ID or phone number on file for your matter.",
     lookupNotFound: "We couldn't find a case matching that Case ID or phone number. Please double-check it, or contact us directly.",
+    msgEyebrow: "Message Status",
+    msgTitle: "Check Your Message",
+    msgSub: "Enter the email or phone number you used to contact us to see if we've responded.",
+    msgPlaceholder: "Your email or phone number",
+    msgSearch: "Check",
+    msgSearching: "Checking…",
+    msgNotFound: "We couldn't find a message from that email or phone number.",
+    msgNoResponseYet: "We've received your message and haven't replied yet. We'll be in touch soon.",
+    msgRespondedOn: "Response",
+    msgYourMessage: "Your message",
     aiTitle: "AI Legal Assistant",
     aiDisclaimer: "For informational purposes only. Consult a licensed attorney for formal legal advice.",
     aiPlaceholder: "Ask about contracts, disputes, timelines…",
@@ -213,6 +233,16 @@ export const T: Record<Lang, Translation> = {
     resultCourt: "ፍርድ ቤት",
     noResultHint: "የተመዘገበውን የክስ መለያ ወይም ስልክ ቁጥር ያስገቡ።",
     lookupNotFound: "ከዚያ የክስ መለያ ወይም ስልክ ቁጥር ጋር የሚዛመድ ጉዳይ አላገኘንም። እባክዎ ያረጋግጡ ወይም በቀጥታ ያግኙን።",
+    msgEyebrow: "የመልእክት ሁኔታ",
+    msgTitle: "መልእክትዎን ያረጋግጡ",
+    msgSub: "መልስ ተሰጥቶዎት እንደሆነ ለማየት ያገናኙን ኢሜይል ወይም ስልክ ቁጥር ያስገቡ።",
+    msgPlaceholder: "ኢሜይል ወይም ስልክ ቁጥርዎ",
+    msgSearch: "አረጋግጥ",
+    msgSearching: "በማረጋገጥ ላይ…",
+    msgNotFound: "ከዚያ ኢሜይል ወይም ስልክ ቁጥር ጋር የሚዛመድ መልእክት አላገኘንም።",
+    msgNoResponseYet: "መልእክትዎን ተቀብለናል፣ ገና መልስ አልሰጠንም። በቅርቡ እናገኝዎታለን።",
+    msgRespondedOn: "መልስ",
+    msgYourMessage: "የላኩት መልእክት",
     aiTitle: "AI ህግ አማካሪ",
     aiDisclaimer: "ለመረጃ አገልግሎት ብቻ የቀረበ ነው። መደበኛ የህግ ምክር ለማግኘት ፈቃድ ያለው ጠበቃ ያማክሩ።",
     aiPlaceholder: "ስለ ውሎች፣ ክርክሮች፣ የጊዜ ሰሌዳዎች ይጠይቁ…",
@@ -302,6 +332,16 @@ export const T: Record<Lang, Translation> = {
     resultCourt: "Mana Murtii",
     noResultHint: "Lakkoofsa Dhimmaa ykn bilbila galmeeffame galchi.",
     lookupNotFound: "Lakkoofsa Dhimmaa ykn bilbilaa sana waliin kan walqabatu hin argamne. Maaloo mirkaneessi ykn kallattiin nu qunnamaa.",
+    msgEyebrow: "Haala Ergaa",
+    msgTitle: "Ergaa Kee Mirkaneessi",
+    msgSub: "Deebiin siif kenname jiraachuu isaa ilaaluuf imeelii ykn lakkoofsa bilbilaa nu quunnamteen galchi.",
+    msgPlaceholder: "Imeelii ykn lakkoofsa bilbilaa kee",
+    msgSearch: "Mirkaneessi",
+    msgSearching: "Mirkaneessaa jira…",
+    msgNotFound: "Imeelii ykn lakkoofsa bilbilaa sana waliin kan walqabatu ergaa hin argamne.",
+    msgNoResponseYet: "Ergaa kee argannee jirra, ammatti deebii hin kennineef. Dafnee si qunnamna.",
+    msgRespondedOn: "Deebii",
+    msgYourMessage: "Ergaa ati ergite",
     aiTitle: "Gorsaa Seeraa AI",
     aiDisclaimer: "Kun qofa odeeffannoodhaaf. Gorsa seeraa dhugaa argachuuf abukaatoo hayyama qabu gaafadhaa.",
     aiPlaceholder: "Waa'ee waliigaltee, falmii, yeroo gaafadhu…",
