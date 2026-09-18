@@ -116,6 +116,25 @@ model SiteContent {
   updatedAt DateTime @updatedAt
 }
 
+enum ResourceKind {
+  FILE
+  LINK
+}
+
+model Resource {
+  id           String        @id @default(cuid())
+  title        String
+  description  String?
+  kind         ResourceKind
+  fileData     Bytes?
+  fileType     String?
+  fileName     String?
+  externalUrl  String?
+  status       ContentStatus @default(DRAFT)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
 model CaseRecord {
   id        String   @id @default(cuid())
   caseId    String   @unique

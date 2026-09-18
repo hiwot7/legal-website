@@ -109,6 +109,12 @@ export const IconCheck = (p: P) => <Icon {...p} glyph={<path d="M4 12l5.5 5.5L20
 export const IconClock = (p: P) => (
   <Icon {...p} glyph={<><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3.5 2" /></>} />
 );
+export const IconDownload = (p: P) => (
+  <Icon {...p} glyph={<><path d="M12 3v12" /><path d="M7 10l5 5 5-5" /><path d="M4 20h16" /></>} />
+);
+export const IconExternalLink = (p: P) => (
+  <Icon {...p} glyph={<><path d="M14 4h6v6" /><path d="M20 4 10 14" /><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6" /></>} />
+);
 export const IconMapPin = (p: P) => (
   <Icon
     {...p}

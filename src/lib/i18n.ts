@@ -64,6 +64,12 @@ export type Translation = {
   formDisclaimer: string;
   footerRights: string;
   footerNote: string;
+  resourcesNavLabel: string;
+  resourcesEyebrow: string;
+  resourcesTitle: string;
+  resourcesEmpty: string;
+  resourcesOpenLink: string;
+  resourcesDownload: string;
   popupHeadline: string;
   popupBody: string;
   popupNamePlaceholder: string;
@@ -149,6 +155,12 @@ export const T: Record<Lang, Translation> = {
     formDisclaimer: "Submitting this form does not create an attorney-client relationship.",
     footerRights: "All rights reserved.",
     footerNote: "Advocates admitted to practice before the Federal Courts of Ethiopia.",
+    resourcesNavLabel: "Resources",
+    resourcesEyebrow: "Resources",
+    resourcesTitle: "Guides & Downloads",
+    resourcesEmpty: "No resources have been published yet.",
+    resourcesOpenLink: "Open link",
+    resourcesDownload: "Download",
     popupHeadline: "Stay Ahead of Legal Changes",
     popupBody: "Join our list for timely legal updates and insights from our attorneys. No spam — unsubscribe anytime.",
     popupNamePlaceholder: "Your name",
@@ -231,6 +243,12 @@ export const T: Record<Lang, Translation> = {
     formDisclaimer: "ይህን ቅጽ መላክ የጠበቃ-ደንበኛ ግንኙነት አይፈጥርም።",
     footerRights: "ሁሉም መብቶች የተጠበቁ ናቸው።",
     footerNote: "በኢትዮጵያ ፌደራል ፍርድ ቤቶች ፊት ለመቆም የተፈቀደላቸው ጠበቆች።",
+    resourcesNavLabel: "ግብዓቶች",
+    resourcesEyebrow: "ግብዓቶች",
+    resourcesTitle: "መመሪያዎች እና ማውረጃዎች",
+    resourcesEmpty: "እስካሁን የታተመ ግብዓት የለም።",
+    resourcesOpenLink: "አገናኝ ክፈት",
+    resourcesDownload: "አውርድ",
     popupHeadline: "ከህግ ለውጦች ጋር ወቅታዊ ይሁኑ",
     popupBody: "ከጠበቆቻችን ወቅታዊ የህግ ዜናዎችን እና ግንዛቤዎችን ለማግኘት ይመዝገቡ። ምንም አይነት አላስፈላጊ መልእክት የለም — በማንኛውም ጊዜ መውጣት ይችላሉ።",
     popupNamePlaceholder: "ሙሉ ስምዎ",
@@ -315,6 +333,12 @@ export const T: Record<Lang, Translation> = {
     formDisclaimer: "Foormii kana erguun walitti dhufeenya abukaatoo-maamilaa hin uumu.",
     footerRights: "Mirgi hundi seeraan eegamaadha.",
     footerNote: "Abukaatoo Mana Murtii Federaalaa Itoophiyaa duratti dhaabbachuuf hayyamamaniidha.",
+    resourcesNavLabel: "Qabeenya",
+    resourcesEyebrow: "Qabeenya",
+    resourcesTitle: "Qajeelfamaa fi Buufama",
+    resourcesEmpty: "Hanga ammaatti qabeenyi maxxanfame hin jiru.",
+    resourcesOpenLink: "Hidhaa banii",
+    resourcesDownload: "Buufadhu",
     popupHeadline: "Jijjiirama Seeraa Waliin Deemi",
     popupBody: "Odeeffannoo fi hubannoo seeraa yeroo isaatti abukaatoota keenya irraa argachuuf galmaa'aa. Ergaa faayidaa hin qabne hin jiru — yeroo barbaaddan bahuu dandeessu.",
     popupNamePlaceholder: "Maqaa keessan",

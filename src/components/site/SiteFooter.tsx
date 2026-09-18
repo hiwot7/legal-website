@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Translation } from "@/lib/i18n";
 
 export default function SiteFooter({ t }: { t: Translation }) {
@@ -13,8 +14,13 @@ export default function SiteFooter({ t }: { t: Translation }) {
           </div>
           <div style={{ fontSize: 12, opacity: 0.6, marginTop: 4 }}>{t.footerNote}</div>
         </div>
-        <div style={{ fontSize: 12, opacity: 0.6 }}>
-          © 2026 {t.firm}. {t.footerRights}
+        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+          <Link href="/resources" style={{ fontSize: 12.5, fontWeight: 600, color: "#ffffff", opacity: 0.85, textDecoration: "none" }}>
+            {t.resourcesNavLabel}
+          </Link>
+          <div style={{ fontSize: 12, opacity: 0.6 }}>
+            © 2026 {t.firm}. {t.footerRights}
+          </div>
         </div>
       </div>
     </footer>
