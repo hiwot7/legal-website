@@ -12,6 +12,7 @@ const LINKS = [
   { href: "/admin/leads", label: "Leads" },
   { href: "/admin/cases", label: "Cases" },
   { href: "/admin/subscribers", label: "Subscribers" },
+  { href: "/admin/qr-code", label: "QR Code" },
   { href: "/admin/profile", label: "My Profile" },
   { href: "/admin/change-password", label: "Change Password" },
 ];
