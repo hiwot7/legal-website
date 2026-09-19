@@ -1,5 +1,8 @@
 :root {
   color-scheme: light;
+  --font-sans: "Public Sans";
+  --font-serif: "Spectral";
+  --font-mono: "IBM Plex Mono";
   --bg: #faf9f6;
   --surface: #ffffff;
   --surface-2: #f1f2f4;
