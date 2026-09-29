@@ -14,11 +14,18 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "A Case ID or phone number is required." }, { status: 400 });
   }
 
-  const record = await prisma.caseRecord.findFirst({
-    where: {
-      OR: [{ caseId: { equals: query, mode: "insensitive" } }, { phone: query }],
-    },
-  });
+  const digitsOnly = query.replace(/\D/g, "");
+
+  const [record] = await prisma.$queryRaw<
+    { id: string; caseId: string; client: string; attorney: string; court: string; status: string; ketero: Date | null }[]
+  >`
+    SELECT id, "caseId", client, attorney, court, status, ketero
+    FROM "CaseRecord"
+    WHERE "caseId" ILIKE ${query}
+       OR (${digitsOnly} != '' AND regexp_replace(phone, '\D', '', 'g') = ${digitsOnly})
+    ORDER BY "createdAt" DESC
+    LIMIT 1
+  `;
 
   if (!record) {
     return NextResponse.json({ found: false });

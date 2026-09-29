@@ -8,8 +8,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const body = await req.json();
-  const { caseId, client, phone, attorney, court, status, ketero } = body;
+  let body: Record<string, unknown>;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
+  }
+  const { caseId, client, phone, attorney, court, status, ketero } = body as Record<string, string | undefined>;
 
   if (!caseId?.trim() || !client?.trim() || !attorney?.trim() || !court?.trim() || !status?.trim()) {
     return NextResponse.json({ error: "Case ID, client, attorney, court, and status are required." }, { status: 400 });
