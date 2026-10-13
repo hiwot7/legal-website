@@ -24,7 +24,7 @@ export default function TestimonialsPage() {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20, flexWrap: "wrap", gap: 12 }}>
         <h1 style={{ fontSize: 22, fontWeight: 700, color: "#0f172a" }}>Testimonials</h1>
         <button
           onClick={() => setShowNew((s) => !s)}
@@ -76,11 +76,8 @@ export default function TestimonialsPage() {
                   </div>
                   <span style={{ color: STATUS_COLOR[it.status], fontWeight: 700, fontSize: 12.5, whiteSpace: "nowrap" }}>{STATUS_LABEL[it.status]}</span>
                 </div>
-                <div style={{ marginTop: 10, display: "flex", gap: 14 }}>
-                  <button
-                    onClick={() => setEditingId(it.id)}
-                    style={{ fontSize: 12.5, fontWeight: 600, color: "#5b6472", background: "none", border: "none", cursor: "pointer", padding: 0 }}
-                  >
+                <div style={{ marginTop: 10, display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  <button onClick={() => setEditingId(it.id)} className="admin-action">
                     Edit
                   </button>
                   <DeleteTestimonialButton id={it.id} onDeleted={load} />

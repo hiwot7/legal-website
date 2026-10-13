@@ -14,7 +14,7 @@ export default async function UsersPage() {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20, flexWrap: "wrap", gap: 12 }}>
         <h1 style={{ fontSize: 22, fontWeight: 700, color: "#0f172a" }}>Admin Users</h1>
         <Link
           href="/admin/users/new"
@@ -25,7 +25,7 @@ export default async function UsersPage() {
       </div>
 
       <div style={{ background: "#fff", border: "1px solid #e2e6ea", borderRadius: 2, overflow: "auto" }}>
-        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13.5 }}>
+        <table className="admin-table" style={{ width: "100%", borderCollapse: "collapse", fontSize: 13.5 }}>
           <thead>
             <tr style={{ textAlign: "left", background: "#f1f2f4" }}>
               {["Name", "Email", "Role", "Created", ""].map((h) => (

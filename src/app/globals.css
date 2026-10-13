@@ -499,3 +499,128 @@ a.card:hover,
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ===== Admin panel: mobile ===== */
+
+/* Tap-target-sized Edit/Delete/etc. action used across every admin list */
+.admin-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.admin-action:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.admin-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.admin-action-danger {
+  color: var(--accent);
+}
+.admin-action-danger:hover:not(:disabled) {
+  background: var(--accent-tint);
+  border-color: var(--accent);
+}
+
+/* Responsive data table: collapses to one stacked card per row below 700px,
+   used by every admin list page (cases, leads, posts, resources, subscribers, users). */
+@media (max-width: 700px) {
+  .admin-table thead {
+    display: none;
+  }
+  .admin-table,
+  .admin-table tbody,
+  .admin-table tr,
+  .admin-table td {
+    display: block;
+    width: 100%;
+  }
+  .admin-table tr {
+    border-top: none !important;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 0;
+    margin: 0 0 12px;
+  }
+  .admin-table tr:last-child {
+    margin-bottom: 0;
+  }
+  .admin-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 8px 14px !important;
+    white-space: normal !important;
+    max-width: none !important;
+    text-align: right;
+  }
+  .admin-table td[data-label]::before {
+    content: attr(data-label);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-faint);
+    text-align: left;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .admin-table td.admin-cell-actions {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .admin-table td.admin-cell-block {
+    display: block;
+    text-align: left;
+  }
+  .admin-table td.admin-cell-block[data-label]::before {
+    display: block;
+    margin-bottom: 6px;
+  }
+}
+
+/* Admin nav: collapses the link list behind a hamburger below 760px */
+@media (max-width: 760px) {
+  .admin-hamburger {
+    display: inline-flex !important;
+  }
+  .admin-nav-links {
+    display: none !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+  }
+  .admin-nav-links.open {
+    display: flex !important;
+  }
+  .admin-main {
+    padding: 20px 16px !important;
+  }
+}
+@media (min-width: 761px) {
+  .admin-hamburger {
+    display: none !important;
+  }
+  .admin-nav-links {
+    display: flex !important;
+  }
+}
+@media (max-width: 480px) {
+  .admin-name-role {
+    display: none;
+  }
+}

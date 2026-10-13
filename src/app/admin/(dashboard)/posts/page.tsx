@@ -21,7 +21,7 @@ export default async function PostsPage() {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20, flexWrap: "wrap", gap: 12 }}>
         <h1 style={{ fontSize: 22, fontWeight: 700, color: "#0f172a" }}>Articles &amp; Case Studies</h1>
         <Link
           href="/admin/posts/new"
@@ -35,7 +35,7 @@ export default async function PostsPage() {
         <p style={{ color: "#8a93a3", fontSize: 14 }}>No posts yet. Create one — it will appear on the public site once published.</p>
       ) : (
         <div style={{ background: "#fff", border: "1px solid #e2e6ea", borderRadius: 2, overflow: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13.5 }}>
+          <table className="admin-table" style={{ width: "100%", borderCollapse: "collapse", fontSize: 13.5 }}>
             <thead>
               <tr style={{ textAlign: "left", background: "#f1f2f4" }}>
                 {["Title", "Type", "Status", "Author", "Updated", ""].map((h) => (
@@ -48,15 +48,17 @@ export default async function PostsPage() {
             <tbody>
               {posts.map((p) => (
                 <tr key={p.id} style={{ borderTop: "1px solid #e2e6ea" }}>
-                  <td style={{ padding: "10px 14px", fontWeight: 600 }}>{p.title}</td>
-                  <td style={{ padding: "10px 14px" }}>{p.type === "CASE_STUDY" ? "Case Study" : "Article"}</td>
-                  <td style={{ padding: "10px 14px" }}>
+                  <td data-label="Title" style={{ padding: "10px 14px", fontWeight: 600 }}>{p.title}</td>
+                  <td data-label="Type" style={{ padding: "10px 14px" }}>{p.type === "CASE_STUDY" ? "Case Study" : "Article"}</td>
+                  <td data-label="Status" style={{ padding: "10px 14px" }}>
                     <span style={{ color: STATUS_COLOR[p.status], fontWeight: 700 }}>{STATUS_LABEL[p.status]}</span>
                   </td>
-                  <td style={{ padding: "10px 14px" }}>{p.author?.name || p.author?.email || "—"}</td>
-                  <td style={{ padding: "10px 14px", whiteSpace: "nowrap", color: "#8a93a3" }}>{p.createdAt.toLocaleDateString()}</td>
-                  <td style={{ padding: "10px 14px", whiteSpace: "nowrap" }}>
-                    <Link href={`/admin/posts/${p.id}`} style={{ fontSize: 12.5, fontWeight: 600, color: "#5b6472", marginRight: 14 }}>
+                  <td data-label="Author" style={{ padding: "10px 14px" }}>{p.author?.name || p.author?.email || "—"}</td>
+                  <td data-label="Updated" style={{ padding: "10px 14px", whiteSpace: "nowrap", color: "#8a93a3" }}>
+                    {p.createdAt.toLocaleDateString()}
+                  </td>
+                  <td className="admin-cell-actions" style={{ padding: "10px 14px", whiteSpace: "nowrap" }}>
+                    <Link href={`/admin/posts/${p.id}`} className="admin-action">
                       Edit
                     </Link>
                     <DeletePostButton id={p.id} />

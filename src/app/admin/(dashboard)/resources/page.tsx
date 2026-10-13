@@ -10,7 +10,7 @@ export default async function ResourcesPage() {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6, flexWrap: "wrap", gap: 12 }}>
         <h1 style={{ fontSize: 22, fontWeight: 700, color: "#0f172a" }}>Resources</h1>
         <Link
           href="/admin/resources/new"
@@ -27,7 +27,7 @@ export default async function ResourcesPage() {
         <p style={{ color: "#8a93a3", fontSize: 14 }}>No resources yet.</p>
       ) : (
         <div style={{ background: "#fff", border: "1px solid #e2e6ea", borderRadius: 2, overflow: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13.5 }}>
+          <table className="admin-table" style={{ width: "100%", borderCollapse: "collapse", fontSize: 13.5 }}>
             <thead>
               <tr style={{ textAlign: "left", background: "#f1f2f4" }}>
                 {["Title", "Type", "Status", "Added", ""].map((h) => (
@@ -40,14 +40,16 @@ export default async function ResourcesPage() {
             <tbody>
               {resources.map((r) => (
                 <tr key={r.id} style={{ borderTop: "1px solid #e2e6ea" }}>
-                  <td style={{ padding: "10px 14px", fontWeight: 600 }}>{r.title}</td>
-                  <td style={{ padding: "10px 14px" }}>{r.kind === "LINK" ? "Link" : r.fileName || "File"}</td>
-                  <td style={{ padding: "10px 14px" }}>
+                  <td data-label="Title" style={{ padding: "10px 14px", fontWeight: 600 }}>{r.title}</td>
+                  <td data-label="Type" style={{ padding: "10px 14px" }}>{r.kind === "LINK" ? "Link" : r.fileName || "File"}</td>
+                  <td data-label="Status" style={{ padding: "10px 14px" }}>
                     <span style={{ color: STATUS_COLOR[r.status], fontWeight: 700 }}>{STATUS_LABEL[r.status]}</span>
                   </td>
-                  <td style={{ padding: "10px 14px", whiteSpace: "nowrap", color: "#8a93a3" }}>{r.createdAt.toLocaleDateString()}</td>
-                  <td style={{ padding: "10px 14px", whiteSpace: "nowrap" }}>
-                    <Link href={`/admin/resources/${r.id}`} style={{ fontSize: 12.5, fontWeight: 600, color: "#5b6472", marginRight: 14 }}>
+                  <td data-label="Added" style={{ padding: "10px 14px", whiteSpace: "nowrap", color: "#8a93a3" }}>
+                    {r.createdAt.toLocaleDateString()}
+                  </td>
+                  <td className="admin-cell-actions" style={{ padding: "10px 14px", whiteSpace: "nowrap" }}>
+                    <Link href={`/admin/resources/${r.id}`} className="admin-action">
                       Edit
                     </Link>
                     <DeleteResourceButton id={r.id} />

@@ -14,11 +14,7 @@ export default function DeleteTestimonialButton({ id, onDeleted }: { id: string;
   }
 
   return (
-    <button
-      onClick={handleDelete}
-      disabled={busy}
-      style={{ fontSize: 12.5, fontWeight: 600, color: "#480823", background: "none", border: "none", cursor: "pointer", padding: 0 }}
-    >
+    <button onClick={handleDelete} disabled={busy} className="admin-action admin-action-danger">
       Delete
     </button>
   );

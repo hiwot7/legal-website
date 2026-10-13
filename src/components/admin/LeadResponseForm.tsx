@@ -25,10 +25,7 @@ export default function LeadResponseForm({ id, response }: { id: string; respons
     return (
       <div>
         {response && <p style={{ fontSize: 12.5, color: "#5b6472", marginBottom: 6, maxWidth: 260 }}>{response}</p>}
-        <button
-          onClick={() => setOpen(true)}
-          style={{ fontSize: 12.5, fontWeight: 600, color: "#480823", background: "none", border: "none", cursor: "pointer", padding: 0 }}
-        >
+        <button onClick={() => setOpen(true)} className="admin-action">
           {response ? "Edit response" : "Respond"}
         </button>
       </div>
@@ -44,11 +41,12 @@ export default function LeadResponseForm({ id, response }: { id: string; respons
         placeholder="Write a response the client will see…"
         style={{ width: "100%", padding: "8px 10px", border: "1px solid #cbd2da", borderRadius: 2, fontSize: 12.5, fontFamily: "inherit", resize: "vertical" }}
       />
-      <div style={{ display: "flex", gap: 10, marginTop: 6 }}>
+      <div style={{ display: "flex", gap: 8, marginTop: 8, flexWrap: "wrap" }}>
         <button
           onClick={save}
           disabled={saving}
-          style={{ fontSize: 12, fontWeight: 600, background: "#480823", color: "#fff", border: "none", borderRadius: 2, padding: "5px 10px", cursor: "pointer" }}
+          className="admin-action"
+          style={{ background: "#480823", color: "#fff", borderColor: "#480823" }}
         >
           {saving ? "Saving…" : "Save"}
         </button>
@@ -57,7 +55,7 @@ export default function LeadResponseForm({ id, response }: { id: string; respons
             setOpen(false);
             setValue(response || "");
           }}
-          style={{ fontSize: 12, fontWeight: 600, color: "#5b6472", background: "none", border: "none", cursor: "pointer" }}
+          className="admin-action"
         >
           Cancel
         </button>

@@ -44,9 +44,9 @@ export default function UserRow({
 
   return (
     <tr style={{ borderTop: "1px solid #e2e6ea" }}>
-      <td style={{ padding: "10px 14px", fontWeight: 600 }}>{name}</td>
-      <td style={{ padding: "10px 14px" }}>{email}</td>
-      <td style={{ padding: "10px 14px" }}>
+      <td data-label="Name" style={{ padding: "10px 14px", fontWeight: 600 }}>{name}</td>
+      <td data-label="Email" style={{ padding: "10px 14px" }}>{email}</td>
+      <td data-label="Role" style={{ padding: "10px 14px" }}>
         <span
           style={{
             fontSize: 11.5,
@@ -59,22 +59,14 @@ export default function UserRow({
           {role}
         </span>
       </td>
-      <td style={{ padding: "10px 14px", color: "#8a93a3", whiteSpace: "nowrap" }}>{createdAt}</td>
-      <td style={{ padding: "10px 14px", whiteSpace: "nowrap" }}>
+      <td data-label="Created" style={{ padding: "10px 14px", color: "#8a93a3", whiteSpace: "nowrap" }}>{createdAt}</td>
+      <td className="admin-cell-actions" style={{ padding: "10px 14px", whiteSpace: "nowrap" }}>
         {!isSelf && (
           <>
-            <button
-              onClick={toggleRole}
-              disabled={busy}
-              style={{ fontSize: 12.5, fontWeight: 600, color: "#5b6472", background: "none", border: "none", cursor: "pointer", marginRight: 14 }}
-            >
+            <button onClick={toggleRole} disabled={busy} className="admin-action">
               Make {role === "SUPERADMIN" ? "Admin" : "Superadmin"}
             </button>
-            <button
-              onClick={remove}
-              disabled={busy}
-              style={{ fontSize: 12.5, fontWeight: 600, color: "#480823", background: "none", border: "none", cursor: "pointer" }}
-            >
+            <button onClick={remove} disabled={busy} className="admin-action admin-action-danger">
               Remove
             </button>
           </>

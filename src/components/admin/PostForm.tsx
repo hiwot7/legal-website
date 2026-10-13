@@ -123,7 +123,7 @@ export default function PostForm({
           <img
             src={`/api/admin/posts/${postId}/cover`}
             alt="Current cover"
-            style={{ display: "block", width: 220, aspectRatio: "16/9", objectFit: "cover", borderRadius: 2, marginTop: 8, marginBottom: 8, border: "1px solid #e2e6ea" }}
+            style={{ display: "block", width: 220, maxWidth: "100%", aspectRatio: "16/9", objectFit: "cover", borderRadius: 2, marginTop: 8, marginBottom: 8, border: "1px solid #e2e6ea" }}
           />
         )}
         <input type="file" accept="image/*" onChange={(e) => setCover(e.target.files?.[0] || null)} style={{ ...inputStyle, padding: "8px 0" }} />
