@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><link rel="stylesheet" href="globals.css"></head>
+<body>
+<header style="border-bottom:1px solid #380619;background:#480823;">
+  <div style="max-width:1100px;margin:0 auto;padding:14px 24px 12px;display:flex;flex-direction:column;gap:12px;outline:2px solid lime;">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;outline:2px solid cyan;">
+      <span style="font-weight:700;font-size:13px;color:#241c07;background:#c9a227;padding:4px 10px;border-radius:3px;">Admin</span>
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end;outline:2px solid yellow;">
+        <span class="admin-name-role" style="font-size:13px;color:#fff;opacity:.8;margin-right:8px;white-space:nowrap;outline:1px solid red;">Hiwot · Superadmin</span>
+        <button style="font-size:13px;font-weight:600;color:#c9a227;background:none;border:1px solid orange;cursor:pointer;padding:9px 10px;min-height:36px;">Sign out</button>
+        <button id="hamburger" class="admin-hamburger" aria-label="Open menu" style="display:none;align-items:center;justify-content:center;background:none;border:1px solid rgba(255,255,255,.3);border-radius:4px;color:#fff;width:36px;height:36px;cursor:pointer;">M</button>
+      </div>
+    </div>
+  </div>
+</header>
+<div id="info" style="padding:10px;font-family:monospace;font-size:14px;"></div>
+<script>
+  document.getElementById('info').textContent = 'innerWidth=' + window.innerWidth;
+</script>
+</body></html>
